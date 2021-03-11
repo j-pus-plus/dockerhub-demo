@@ -1,8 +1,10 @@
 ---
-- name: Pull docker image of deockehub-demo
+- name: Get infos on container
   hosts: all
   tasks:
-    - name: Pull devop-demo image
-      docker_image:
-        name: jaylimbasiya/devop-demo
-        source: pull
+    - name: Get information
+      docker_container_info:
+        name: my_running_app
+      register: result
+
+    - debug: msg="{{result}}"
