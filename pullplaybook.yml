@@ -1,10 +1,8 @@
 ---
-- name: Get infos on container
+- name: Pull docker image of devop-demo
   hosts: all
   tasks:
-    - name: Get information
-      docker_container_info:
-        name: my_running_app
-      register: result
-
-    - debug: msg="{{result}}"
+    - name: Pull junit devops image
+      docker_image:
+        name: jaylimbasiya/devop-demo
+        source: pull
