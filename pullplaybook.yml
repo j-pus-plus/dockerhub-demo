@@ -1,0 +1,8 @@
+---
+- name: Pull docker image of deockehub-demo
+  hosts: all
+  tasks:
+    - name: Pull deockehub-demo image
+      docker_image:
+        name: jaylimbasiya/dockerhub-demo
+        source: pull
