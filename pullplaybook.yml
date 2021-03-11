@@ -2,7 +2,7 @@
 - name: Pull docker image of deockehub-demo
   hosts: all
   tasks:
-    - name: Pull deockehub-demo image
+    - name: Pull devop-demo image
       docker_image:
-        name: jaylimbasiya/dockerhub-demo
+        name: jaylimbasiya/devop-demo
         source: pull
