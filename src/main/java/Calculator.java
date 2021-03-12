@@ -3,7 +3,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
-public class Calculator {
+Public class Calculator {
 
 
     public Calculator() {
