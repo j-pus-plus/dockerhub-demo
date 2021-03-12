@@ -1,12 +1,10 @@
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 
 public class Calculator {
-    private static final Logger logger = LogManager.getLogger(Calculator.class);
+
 
     public Calculator() {
     }
@@ -32,7 +30,7 @@ public class Calculator {
                 System.out.print("Enter the second number : ");
                 number2 = scanner.nextDouble();
             } catch (InputMismatchException error) {
-                logger.error("Invalid input, Entered input is not a number");
+
                 return;
             }
             switch (choice) {
@@ -61,31 +59,31 @@ public class Calculator {
 
 
     public double add(double number1, double number2) {
-        logger.info("[ADDITION] - " + number1 + ", " + number2);
+
         double result = number1 + number2;
-        logger.info("[RESULT - ADDITION] - " + result);
+
         return result;
     }
 
     public double subtract(double number1, double number2) {
-        logger.info("[SUBTRACTION] - " + number1 + ", " + number2);
+
         double result = number1 - number2;
-        logger.info("[RESULT - SUBTRACTION] - " + result);
+
         return result;
     }
 
 
     public double multiply(double number1, double number2) {
-        logger.info("[MULTIPLICATION] - " + number1 + ", " + number2);
+
         double result = number1 * number2;
-        logger.info("[RESULT - MULTIPLICATION] - " + result);
+
         return result;
     }
 
     public double divide(double number1, double number2) {
         double result = 0;
         try {
-            logger.info("[DIVISION] - " + number1 + ", " + number2);
+
             if (number1 == 0 && number2 == 0) {
                 result = Double.NaN;
                 throw new ArithmeticException("Case of NaN 0.0/0.0");
@@ -99,9 +97,9 @@ public class Calculator {
                 result = number1 / number2;
             }
         } catch (ArithmeticException error) {
-            logger.error("[EXCEPTION - DIVISION] - Cannot be divided by ZERO " + error.getLocalizedMessage());
+
         } finally {
-            logger.info("[RESULT - DIVISION] - " + result);
+
         }
         return result;
     }
