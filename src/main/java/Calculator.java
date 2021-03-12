@@ -18,7 +18,7 @@ public class Calculator {
         do {
             System.out.println("Calculator-DevOps, Choose to perform operation");
             System.out.print("Press 1 to Add\nPress 2 to Subtract\nPress 3 to Multiply\nPress 4 to Divide\n" +
-                    "Press any other key to exit\nEnter your choice: ");
+                    "press any other key to exit\nEnter your choice: ");
             int choice;
             try {
                 choice = scanner.nextInt();
